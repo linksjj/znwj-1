@@ -1,0 +1,20 @@
+scalar Long
+scalar LocalDate
+scalar LocalDateTime
+scalar JsonNode
+
+type Subscription {
+  testStream: TestStreamType
+}
+
+type Mutation{
+  #    m(id:ID!):Operator
+}
+
+type Query{
+  #    q(id:ID!):Operator
+}
+
+type TestStreamType{
+  count:Long
+}

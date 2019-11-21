@@ -1,0 +1,69 @@
+<div class="silk-wrapper" fxFlex fxLayout="column">
+  <div class="silk-head" fxLayout fxLayoutGap="8px">
+    <span>34597</span>
+    <span>—</span>
+    <span>007B0096B01D</span>
+    <span>—</span>
+    <span fxFlex>{{silk.id}}</span>
+    <button [matMenuTriggerFor]="menu" mat-icon-button style="line-height: 44px">
+      <mat-icon>list</mat-icon>
+    </button>
+    <mat-menu #menu xPosition="before">
+      <button mat-menu-item type="button">
+        {{'Btn.exceptionConfirm'|translate}}
+      </button>
+    </mat-menu>
+  </div>
+
+  <div class="silk-info" fxFlex fxLayout fxLayoutAlign="start center" fxLayoutGap="40px">
+    <div fxLayout fxLayoutAlign="start center" fxLayoutGap="8px">
+      <span translate="product"></span>
+      <span>FDY</span>
+    </div>
+    <div fxLayout fxLayoutAlign="start center" fxLayoutGap="8px">
+      <span translate="batchNo"></span>
+      <span>HC053001</span>
+    </div>
+    <div fxLayout fxLayoutAlign="start center" fxLayoutGap="8px">
+      <span translate="Batch.spec"></span>
+      <span>530dtex/96f</span>
+    </div>
+    <div fxLayout fxLayoutAlign="start center" fxLayoutGap="8px">
+      <span translate="line"></span>
+      <span>B4</span>
+    </div>
+    <div fxLayout fxLayoutAlign="start center" fxLayoutGap="8px">
+      <span translate="lineMachine"></span>
+      <span>37#</span>
+    </div>
+    <div fxLayout fxLayoutAlign="start center" fxLayoutGap="8px">
+      <span translate="Silk.spindle"></span>
+      <span>3</span>
+    </div>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <div fxFlex="50px" fxLayout>
+    <div fxFlex="50" fxLayout fxLayoutAlign="center center">
+      <mat-chip color="primary" disableRipple>毛丝</mat-chip>
+    </div>
+
+    <mat-divider vertical></mat-divider>
+
+    <div fxFlex="50" fxLayout fxLayoutAlign="center center" fxLayoutGap="16px">
+      <mat-chip color="accent" disableRipple selected style="color: white;">染判异常</mat-chip>
+      <mat-chip color="accent" disableRipple selected style="color: white;">纸管破</mat-chip>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+</div>
+
+<mat-divider vertical></mat-divider>
+
+<div class="gallery-wrapper">
+  <gallery #galleryComp (itemClick)="showLightbox($event,galleryComp)" [id]="silk.id+'1'" [items]="silk.galleryItems" [thumb]="false"></gallery>
+  <div style="display: none">
+    <input *ngFor="let item of silk.galleryItems; let i = index" [lightbox]="i" gallery="{{silk.id}}">
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<mat-sidenav-container>
+  <div class="main-wrapper" fxLayout="column">
+
+    <mat-toolbar class="mat-elevation-z6" color="primary">
+      <div class="toolbar-logo">
+        <h1 routerLink="/" style="cursor: pointer;">{{'title'|translate}}</h1>
+      </div>
+
+      <span fxFlex></span>
+      <app-nav></app-nav>
+    </mat-toolbar>
+
+    <main [@sideAnimation]="getState(o)" fxFlex>
+      <router-outlet #o="outlet"></router-outlet>
+    </main>
+  </div>
+
+</mat-sidenav-container>

@@ -1,0 +1,16 @@
+<ng-scrollbar>
+  <div fxFlex fxLayout="column">
+    <app-silk *ngFor="let silk of silks$|async" [silk]="silk"></app-silk>
+  </div>
+</ng-scrollbar>
+
+<!--<footer fxFlex="48px" fxLayout fxLayoutAlign="start center">-->
+<!--  <span fxFlex></span>-->
+<!--  <mat-paginator></mat-paginator>-->
+<!--</footer>-->
+
+<footer fxLayout fxLayoutAlign="start center">
+  <span fxFlex></span>
+  <mat-paginator [length]="count$|async" [pageIndex]="pageIndex$|async" [pageSizeOptions]="[10,20,30]" [pageSize]="pageSize$|async" disabled></mat-paginator>
+</footer>
+

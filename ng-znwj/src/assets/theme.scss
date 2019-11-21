@@ -1,0 +1,11 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$znwj-primary: mat-palette($mat-blue);
+$znwj-accent: mat-palette($mat-pink, 400);
+$znwj-warn: mat-palette($mat-amber, 300);
+
+$znwj-theme: mat-light-theme($znwj-primary, $znwj-accent, $znwj-warn);
+
+@include angular-material-theme($znwj-theme);

@@ -1,0 +1,35 @@
+@import "../library";
+
+:host {
+  display: block;
+  height: 100%;
+}
+
+.main-wrapper {
+  height: 100%;
+  position: relative;
+  transition: all linear 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.mat-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 110;
+  //box-shadow: 0 2px 2px -1px rgba(0, 0, 0, .2), 0 2px 8px 0 rgba(0, 0, 0, .08), 0 1px 18px 0 rgba(0, 0, 0, .12);
+  //box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.08);
+}
+
+.mat-toolbar-single-row {
+  height: unset !important;
+  //height: @header-height;
+}
+
+main {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 -3px 4px rgba(0, 0, 0, 0.2);
+}

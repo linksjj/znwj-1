@@ -1,0 +1,48 @@
+@import "../../../../library";
+
+@height: 150px;
+
+:host {
+  margin: 8px 0;
+  flex: 0 0 auto;
+  padding: 0;
+  height: @height;
+  min-height: @height;
+  max-height: @height;
+  border-left: 4px solid @blue-600;
+  font-size: 18px;
+  display: flex;
+}
+
+.silk-wrapper {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
+}
+
+.silk-head {
+  background-color: @blue-600;
+  color: white;
+  flex: 0 0 48px;
+  line-height: 48px;
+  padding: 0 8px;
+}
+
+.silk-info {
+  padding: 0 8px;
+}
+
+.mat-chip {
+  padding: 8px;
+  font-size: 20px;
+}
+
+.gallery-wrapper {
+  flex: 0 0 @height;
+}
+
+gallery {
+  height: @height;
+}
+
+footer {
+  flex: 0 0 48px;
+}
