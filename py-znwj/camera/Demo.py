@@ -12,8 +12,8 @@ import datetime
 import struct
 import time
 
-from ImageConvert import *
-from MVSDK import *
+from camera.ImageConvert import *
+from camera.MVSDK import *
 
 g_cameraStatusUserInfo = b"statusInfo"
 

@@ -12,8 +12,8 @@ import time
 
 import cv2
 import numpy
-from ImageConvert import *
-from MVSDK import *
+from camera.ImageConvert import *
+from camera.MVSDK import *
 
 g_cameraStatusUserInfo = b"statusInfo"
 
