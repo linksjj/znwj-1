@@ -145,8 +145,8 @@ def on_message(client, userdata, msg):
         # 通过条码得出抓图后的路径
         # 调用YOLO实例的 detect 方法 得出 异常 数据  backData
         # 把backData传回我
-        path = "/znwj_dev/db" + code + '/original'
-        outdir = "/znwj_dev/db" + code + '/defect/'
+        path = "/znwj_dev/db/" + code + '/original'
+        outdir = "/znwj_dev/db/" + code + '/defect/'
         out_file_name = []
         out_label = []
         class_names = ['MS', 'JS', 'CX', 'YW', 'N_MS']
